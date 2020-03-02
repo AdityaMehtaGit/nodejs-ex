@@ -11,15 +11,6 @@ pool:
 
 steps:
 # Install oc so that it can be used within a 'script' or bash 'task'
-- task: oc-setup@2
-  inputs:
-    openshiftService: 'My Openshift'
-    version: '3.11.154'
-- task: oc-cmd@2
-  inputs:
-    openshiftService: 'OpenshiftOnline'
-    version: '3.11'
-    cmd: 'oc start-build nodejs-ex --follow'
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
