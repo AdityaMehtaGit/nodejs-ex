@@ -11,6 +11,10 @@ pool:
 
 steps:
 # Install oc so that it can be used within a 'script' or bash 'task'
+- task: oc-setup@2
+  inputs:
+    openshiftService: 'OpenshiftOnline'
+    version: '4.2'
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
